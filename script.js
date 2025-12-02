@@ -1,4 +1,3 @@
-//your JS code here. If required.
 document.getElementById("userForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -7,7 +6,7 @@ document.getElementById("userForm").addEventListener("submit", function (event) 
 
     // Validation for empty fields
     if (age === "" || name === "") {
-        alert("Please enter valid details.");
+        alert("Please enter valid details");  // FIXED (removed period)
         return;
     }
 
@@ -19,7 +18,7 @@ document.getElementById("userForm").addEventListener("submit", function (event) 
                 } else {
                     reject(`Oh sorry ${name}. You aren't old enough.`);
                 }
-            }, 4000); // 4-second delay
+            }, 4000);
         });
     }
 
@@ -27,4 +26,3 @@ document.getElementById("userForm").addEventListener("submit", function (event) 
         .then(message => alert(message))
         .catch(error => alert(error));
 });
-
